@@ -9,8 +9,8 @@
 <%= form_with model: @group, url: categories_path do |form| %>
   <div class="flex justify-center w-full">
         <div class="flex flex-col w-[90%] p-5 border max-w-wrapper">
-          <%= form.text_field :name, required: true, placeholder: "New Category", class: 'px-5 py-2 border-b w-[90%] mx-auto block outline-none text-[20px] mb-5 '%>
-          <%= form.select :icon, choices_for_select(@options, selected: @group.icon), { prompt: "Select the icon" }, class: "text-center text-2xl" %>
+          <%= form.text_field :name, required: true, placeholder: "New Category", class: 'px-5 py-2 border-b w-[90%] mx-auto block outline-none text-[20px] mb-5 ', required: true %>
+          <%= form.select :icon, options_for_select(@choices, selected: @group.icon), { prompt: "Select the icon" }, class: "text-center text-2xl" , required: true %>
         </div>
   </div>
   <%= form.submit "Create Category", class: 'bg-secondary fixed bottom-0 border border-white text-center px-7 text-white py-3 w-full uppercase'%>

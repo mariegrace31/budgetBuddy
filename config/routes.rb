@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   end
 
   resources :categories, only: %i[index new create destroy] do
+    get :home, on: :collection
     resources :exchanges, only: %i[index new create]
   end
 end

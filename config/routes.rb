@@ -1,18 +1,14 @@
 Rails.application.routes.draw do
-  get 'exchanges/index'
-  get 'exchanges/new'
-  get 'exchanges/create'
-  get 'categories/index'
-  get 'categories/home'
-  get 'categories/new'
-  get 'categories/create'
   devise_for :users
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  authenticated :user do
+    root 'categories#home', as: :authenticated_root
+  end
 
-  # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
-  # Can be used by load balancers and uptime monitors to verify that the app is live.
-  get "up" => "rails/health#show", as: :rails_health_check
+  unauthenticated do
+    root 'categories#index', as: :unauthenticated_root
+  end
 
-  # Defines the root path route ("/")
-  # root "posts#index"
+  resources :categories, only: %i[index new create destroy] do
+    resources :exchanges, only: %i[index new create]
+  end
 end

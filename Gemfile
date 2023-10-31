@@ -32,6 +32,8 @@ gem 'devise'
 
 gem "tailwindcss-rails", "~> 2.0"
 
+gem "font-awesome-sass", "~> 6.4.2"
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
 

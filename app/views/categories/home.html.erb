@@ -1,4 +1,19 @@
 <div>
-  <h1 class="font-bold text-4xl">Categories#home</h1>
-  <p>Find me in app/views/categories/home.html.erb</p>
+<%@header = 'Categories' %>
+<%= render "shared/header", locals: { header: @header }, back: false %>
+    <% if @categories.empty?%>
+     <p class="text-center">You don't have any categories yet !!</p>
+       <% else %>
+         <ul class="flex justify-center pt-5">
+             <% @categories.each do |cat| %>
+                 <%= link_to category_exchanges_path(category_id: cat.id) do %>
+                     <li class="w-[95%] flex justify-between shadow-sm px-3 py-5  my-5 bg-white">
+                         <div class="text-4xl me-4"><%= cat.icon %></div>
+                         <div class="text-lg font-semibold"><%= cat.name %></div>
+                     </li>
+                 <% end %>
+             <% end %>
+         </ul>
+       <% end %>
+ <%= link_to "ADD CATEGORY", new_category_path , class: 'fixed bottom-0 border border-white text-center bg-secondary text-white py-3 w-full'%>
 </div>

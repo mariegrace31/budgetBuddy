@@ -1,4 +1,7 @@
-<div>
-  <h1 class="font-bold text-4xl">Categories#index</h1>
-  <p>Find me in app/views/categories/index.html.erb</p>
+<div class="flex flex-col items-center justify-center min-h-screen">
+  <h1 class="text-4xl font-bold">Budget Beam</h1>
+  <div class="flex flex-col items-center w-full gap-2 mt-5">
+    <%= link_to "Log In", new_user_session_path, class: 'text-center text-white bg-primary py-3 w-3/4 rounded-[50px] hover:scale-105 transition-all' %>
+    <%= link_to "Sign up", new_user_registration_path, class: 'text-center text-gray py-3 w-3/4  hover:scale-105 transition-all' %>
+  </div>
 </div>

@@ -8,6 +8,6 @@
           <%= form.select :icon, options_for_select(@choices, selected: @group.icon), { prompt: "Select the icon" }, class: "text-center text-2xl" , required: true %>
         </div>
   </div>
-  <%= form.submit "Create Category", class: 'bg-secondary fixed bottom-0 border border-white text-center px-7 text-white py-3 w-full uppercase'%>
+  <%= form.submit "Save", class: 'bg-secondary fixed bottom-0 border border-white text-center px-7 text-white py-3 w-full uppercase'%>
 <% end %>
 </div>

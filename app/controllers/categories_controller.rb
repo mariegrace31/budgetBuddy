@@ -1,8 +1,7 @@
 class CategoriesController < ApplicationController
   before_action :authenticate_user!, except: [:index]
 
-  def index
-  end
+  def index; end
 
   def home
     @categories = current_user.groups

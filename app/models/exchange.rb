@@ -1,5 +1,5 @@
 class Exchange < ApplicationRecord
-  belongs_to :author, class_name: 'User'
+  belongs_to :author, class_name: 'User', foreign_key: 'author_id'
   has_many :exchange_groups, dependent: :destroy
   has_many :groups, through: :exchange_groups
 

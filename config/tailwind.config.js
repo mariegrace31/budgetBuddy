@@ -1,4 +1,5 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
+
 module.exports = {
   content: [
     './public/*.html',
@@ -12,11 +13,11 @@ module.exports = {
         center: true,
       },
       colors: {
-        primary: '#3878c2',
-        secondary: '#60b524',
-        text: '#434b55',
-        subtext: '#989da3',
-      },
+        primary: '#3878c2',	        
+        secondary: '#60b524',	        
+        text: '#434b55',	       
+        subtext: '#989da3',	  
+      },	      
     },
   },
   plugins: [

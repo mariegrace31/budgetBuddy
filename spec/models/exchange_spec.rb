@@ -29,7 +29,7 @@ RSpec.describe Exchange, type: :model do
   it 'is invalid without an author' do
     exchange = Exchange.new(name: 'Sample Exchange', amount: 100, author: nil)
     exchange.valid?
-    expect(exchange.errors[:author]).to include("must exist")
+    expect(exchange.errors[:author]).to include('must exist')
   end
 
   it 'should have an integer author_id' do

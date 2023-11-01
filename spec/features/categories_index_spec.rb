@@ -1,12 +1,12 @@
 require 'rails_helper'
 
-RSpec.feature "CategoriesIndices", type: :feature do
+RSpec.feature 'Splash screen', type: :feature do
   before :each do
     visit unauthenticated_root_path
   end
 
   it 'shows the logo ' do
-    expect(page).to have_content('Budget Beam')
+    expect(page).to have_content('Budget Buddy')
   end
 
   it 'shows the Log in button ' do

@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.feature "CategoriesHomes", type: :feature do
+RSpec.describe 'Categories home ' do
   include Devise::Test::IntegrationHelpers
 
   before :each do

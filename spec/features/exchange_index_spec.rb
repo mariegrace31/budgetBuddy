@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.feature "ExchangeIndices", type: :feature do
+RSpec.describe 'categories page ' do
   include Devise::Test::IntegrationHelpers
 
   before :each do

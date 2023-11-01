@@ -8,7 +8,11 @@ Rails.application.routes.draw do
     root 'categories#index', as: :unauthenticated_root
   end
 
-  resources :categories, only: %i[index new create destroy] do
+  devise_scope :user do
+    get 'users/sign_out', to: 'devise/sessions#destroy'
+  end
+
+  resources :categories, only: %i[index home new create destroy] do
     get :home, on: :collection
     resources :exchanges, only: %i[index new create]
   end

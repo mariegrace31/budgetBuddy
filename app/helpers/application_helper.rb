@@ -14,7 +14,7 @@ module ApplicationHelper
     suffix = suffixes[order]
 
     formatted_number = if order.positive?
-        # Convert to float and remove trailing ".0"
+                         # Convert to float and remove trailing ".0"
                          (number / (10**(order * 3).to_f)).round(1).to_s.sub(/\.0$/, '')
                        else
                          number.to_s

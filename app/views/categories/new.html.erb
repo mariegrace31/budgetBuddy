@@ -1,11 +1,6 @@
 <div>
 <% @header = "New Category" %>
 <%= render "shared/header", locals: { header: @header }, back: true %>
-<% if flash[:notice].present? %>
-  <div class="notice">
-    <%= flash[:notice] %>
-  </div>
-<% end %>
 <%= form_with model: @group, url: categories_path do |form| %>
   <div class="flex justify-center w-full h-full">
         <div class="flex flex-col w-[90%] p-5 border max-w-wrapper">

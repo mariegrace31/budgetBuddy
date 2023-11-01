@@ -13,8 +13,21 @@
   </head>
 
   <body>
-  <%= yield %>
+  <% if flash[:notice] %>
+      <div class="alert alert-success alert-dismissible fade show mb-0" role="alert">
+        <%= flash[:notice] %>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+    <% end %>
+    <% if flash[:alert] %>
+      <div class="alert alert-warning alert-dismissible fade show mb-0" role="alert">
+        <%= flash[:alert] %>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+    <% end %>
   <main>
+  <%= yield %>
+  </main>
   <!-- drawer component -->
   <div id="drawer-navigation" class="fixed top-0 left-0 z-40 h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-white w-64 dark:bg-gray-800" tabindex="-1" aria-labelledby="drawer-navigation-label">
       <h5 id="drawer-navigation-label" class="text-base font-semibold text-gray-500 uppercase dark:text-gray-400">Menu</h5>
@@ -112,6 +125,5 @@
         </ul>
      </div>
   </div>
-      </main>
   </body>
 </html>

@@ -14,15 +14,14 @@
 
   <body>
   <% if flash[:notice] %>
-      <div class="alert alert-success alert-dismissible fade show mb-0" role="alert">
+      <div class="notice flex flex-col items-center p-4 mb-2 text-blue-800 rounded-lg dark:bg-gray-800 dark:text-blue-400" role="alert">
         <%= flash[:notice] %>
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
       </div>
     <% end %>
     <% if flash[:alert] %>
-      <div class="alert alert-warning alert-dismissible fade show mb-0" role="alert">
+      <div class="alert flex flex-col items-center p-4 mb-2 text-red-800 rounded-lg dark:bg-gray-800 dark:text-red-400" role="alert">
         <%= flash[:alert] %>
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       </div>
     <% end %>
   <main>

@@ -1,5 +1,13 @@
-
 <div>
-  <h1 class="font-bold text-4xl">Exchanges#new</h1>
-  <p>Find me in app/views/exchanges/new.html.erb</p>
+<% @header = "New Transaction" %>
+<%= render "shared/header", locals: { header: @header }, back: true %>
+<%= form_with model: @exchange, url: category_exchanges_path(@category) do |form| %>
+  <div class="flex justify-center w-full">
+        <div class="flex flex-col w-[95%] p-5 border">
+          <%= form.text_field :name, required: true, placeholder: "New Transaction Name", class: 'px-5 py-2 border-b w-[95%] mx-auto block outline-none text-[20px] mb-5 ', required: true %>
+          <%= form.number_field :amount, required: true, placeholder: "Amount (USD)", class: 'px-5 py-2 border-b w-[95%] mx-auto block outline-none text-[20px] ', required: true %>
+        </div>
+  </div>
+  <%= form.submit "Save", class: 'bg-secondary fixed bottom-0 border border-white text-center px-7 text-white py-3 w-full '%>
+<% end %>
 </div>

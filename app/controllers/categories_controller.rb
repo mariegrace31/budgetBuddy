@@ -36,6 +36,6 @@ class CategoriesController < ApplicationController
   private
 
   def categories_params
-    params.require(:group).permit(:name, :icon)
+    params.require(:group).permit(:name, :icon).merge(user: current_user)
   end
 end

@@ -1,1 +1,7 @@
-@import "font-awesome";
+/* app/assets/stylesheets/application.css */
+
+/* Include Font Awesome */
+@import 'font-awesome';
+
+/* Include Tailwind CSS */
+@import 'tailwind';

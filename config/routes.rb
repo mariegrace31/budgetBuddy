@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
+
   authenticated :user do
     root 'categories#home', as: :authenticated_root
   end
@@ -8,7 +9,7 @@ Rails.application.routes.draw do
     root 'categories#index', as: :unauthenticated_root
   end
 
-  devise_scope :user do
+   devise_scope :user do
     get 'users/sign_out', to: 'devise/sessions#destroy'
   end
 

@@ -76,6 +76,12 @@ this will install the required gemfile for running the project
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- LIVE DEMO -->
+
+## :rocket: Live Demo 
+
+Here is my live demo [link](https://budgetbuddy31.onrender.com/).
+
 <!-- AUTHORS -->
 
 ## 👥 Author <a name="author"></a>

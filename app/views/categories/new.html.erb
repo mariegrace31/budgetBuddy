@@ -1,0 +1,13 @@
+<div>
+ <% @header = "New Category" %>
+  <%= render "shared/header", locals: { header: @header }, back: true %>
+  <%= form_with model: @group, url: categories_path, class:'pt-12' do |form| %>
+    <div class="flex justify-center w-full h-full mt-12">
+          <div class="flex flex-col w-[90%] p-5">
+            <%= form.text_field :name, placeholder: "New Category", class: 'px-5 py-2 border-b w-full mx-auto block outline-none text-[20px] mb-5 ' , required: true%>
+            <%= form.select :icon, options_for_select(@choices, selected: @group.icon), { prompt: "Select the icon" }, class: "text-center text-2xl" , required: true %>
+          </div>
+    </div>
+    <%= form.submit "Save", class: 'bg-secondary fixed bottom-0 border border-white text-center px-7 text-white py-3 w-full uppercase'%>
+  <% end %>
+</div>

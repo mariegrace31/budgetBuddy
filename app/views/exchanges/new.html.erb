@@ -1,0 +1,13 @@
+<div>
+ <% @header = "New Transaction" %>
+  <%= render "shared/header", locals: { header: @header }, back: true %>
+  <%= form_with model: @exchange, url: category_exchanges_path(@category), class:'pt-12' do |form| %>
+    <div class="flex justify-center w-full mt-12">
+          <div class="flex flex-col w-[95%] p-5 ">
+            <%= form.text_field :name,  placeholder: "New Transaction Name", class: 'px-5 py-2 border-b w-[95%] mx-auto block outline-none text-[20px] mb-5 ', required: true %>
+            <%= form.number_field :amount, placeholder: "Amount (USD)", class: 'px-5 py-2 border-b w-[95%] mx-auto block outline-none text-[20px] ', required: true %>
+          </div>
+    </div>
+    <%= form.submit "Save", class: 'bg-secondary fixed bottom-0 border border-white text-center px-7 text-white py-3 w-full '%>
+  <% end %>
+</div>

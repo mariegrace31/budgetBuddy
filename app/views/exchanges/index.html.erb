@@ -1,0 +1,33 @@
+<div>
+  <% @header = "Transactions" %>
+	  <%= render "shared/header", locals: { header: @header }, back: true %>
+<div class="mb-10">
+  <% if @exchanges.empty?%>
+    <p class="text-center pt-16 text-xl">You don't have any transactions yet !!</p>
+  <% else %>
+    <ul class="flex flex-col justify-center pt-12 ">
+      <li class="w-[90%] mx-auto flex flex-col items-center gap-3 shadow-lg px-3 py-5  my-5 bg-white">
+          <div class="flex  justify-center items-center">
+            <div class="text-4xl me-4"><%= @category.icon %></div>
+            <div class="text-lg opacity-[0.8] font-semibold uppercase"><%= @category.name %></div>
+          </div>
+          <div class="text-center mb-4">
+            <div class="text-subtext text-sm font-light">Total spent on this category</div>
+            <div class="font-extrabold text-3xl">$ <%= number_with_delimiter(@total) %></div>
+          </div> 
+      </li>
+      <% @exchanges.each do |ex| %>
+        <li class="w-[90%] mx-auto items-center  shadow-lg px-3 py-5  my-5 bg-white">
+          <div class=" flex justify-between items-center p-1">
+              <span class="capitalize text-text font-semibold"><%= ex.name %></span>
+              <span class="font-semibold text-lg">$ <%=  number_with_delimiter(ex.amount)  %></span>
+          </div>
+          <div class="flex justify-between items-center p-1">
+              <span class="capitalize text-subtext font-light"><%= ex.created_at.strftime("%d %B '%Y, %R") %></span>
+          </div>
+        </li>
+      <% end %>
+    </ul>
+  <% end %>
+  <%= link_to "Add a new Transaction", new_category_exchange_path(@category), class: 'fixed bottom-0 border border-white text-center bg-secondary text-white py-3 w-full' %>
+</div>

@@ -1,0 +1,21 @@
+<div>
+ <% @header = 'Categories' %>
+ <%= render "shared/header", locals: { header: @header }, back: false %>
+
+ 	  <% if @categories.empty?%>
+      <p class="text-center pt-16 text-xl">You don't have any categories yet !!</p>
+        <% else %>
+          <ul class="flex justify-center container px-auto flex-col pt-12">
+              <% @categories.each do |cat| %>
+                  <%= link_to category_exchanges_path(category_id: cat.id), class:'w-[95%] container mx-auto flex justify-center' do %>
+                      <li class="w-[90%] flex justify-between shadow-sm px-3 py-5  my-5 bg-white">
+                          <div class="text-4xl me-4"><%= cat.icon %></div>
+                          <div class="text-lg font-semibold"><%= cat.name %></div>
+                          <div class="text-lg font-semibold">$ <%= format_large_number(cat.exchanges.sum(:amount)) %>
+                      </li>
+                  <% end %>
+              <% end %>
+          </ul>
+        <% end %>
+  <%= link_to "Add a new category", new_category_path, class: 'fixed bottom-0 border border-white text-center bg-secondary text-white py-3 w-full'%>
+</div>

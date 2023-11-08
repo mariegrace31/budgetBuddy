@@ -21,7 +21,7 @@
 
 ## 📖 Microverse Recipe App <a name="about-project"></a>
 
-**Budget Buddy** is is a mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what.
+**Budget Buddy** is a mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -36,7 +36,7 @@
 ### Key Features <a name="key-features"></a>
 
 - **Create and manage categories**: Users can create a category.
-- **Add transactions**: Each category can have differents transactions.
+- **Add transactions**: Each category can have different transactions.
 
 <p align="right">(<a href="#-table-of-contents">back to top</a>)</p>
 
@@ -124,7 +124,7 @@ If you find this project helpful or interesting, star ⭐️ this repository on 
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I  would like to thank Microverse for teaching and enforcing our professional level and also many thanks to [ Gregoire Vella ](https://www.behance.net/gregoirevella) , the author of the original design of this app.
+I  would like to thank Microverse for teaching and enforcing our professional level and many thanks to [ Gregoire Vella ](https://www.behance.net/gregoirevella) , the author of the original design of this app.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

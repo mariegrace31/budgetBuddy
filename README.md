@@ -2,7 +2,7 @@
 
 ## 📗 Table of Contents
 
-- [📖 Budget Buddy](#-about-project)
+  - [📖 Budget Buddy](#-about-project)
   - [🛠 Built With](#-built-with)
   - [🌟 Key Features](#-key-features)
   - [💻 Getting Started](#-getting-started)

@@ -1,7 +1,7 @@
 databases:
   - name: budget-buddy
-    databaseName: budget_buddy_x1ts
-    user: budget_buddy_x1ts_user
+    databaseName: budget_buddy_yktl
+    user: budget_buddy_yktl_user
 
 services:
   - type: web
